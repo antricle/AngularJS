@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html ng-app="myModule">
+<head>
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/Script.js"></script>
+</head>
+<body>
+
+    <div ng-controller="myController">
+        Sort By: <select ng-model="sortColumn">
+                     <option value="name">Name ASC</option>
+        <option value="-name">Name DESC</option>
+        </select>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="technology in technologies | orderBy:sortColumn">
+                    <td>{{technology.name}}</td>
+   
+                </tr>
+            </tbody>
+        </table>
+    </div>  
+</body>
+</html>

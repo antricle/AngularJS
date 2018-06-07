@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html ng-app="myModule">
+<head>
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/Script.js"></script>
+</head>
+<body>
+    <div ng-controller="myController">
+        <h1>Display as a table</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Country</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="country in countries">
+                    <td>{{country.name}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div ng-controller="myController">
+        <h1>Display as a list</h1>
+        <ul>
+            <li ng-repeat="country in countries">
+                {{country.name}}
+                <ul>
+                    <li ng-repeat="city in country.cities">
+                        {{city.name}}
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>   
+
+    <div ng-controller="myController">
+        <h1>Display as a list - showing indexes</h1>
+        <ul>
+            <li ng-repeat="country in countries" ng-init="parentIndex=$index">
+                {{country.name}} (index - {{$index}})
+                <ul>
+                    <li ng-repeat="city in country.cities">
+                        {{city.name}} (parent - {{$parent.$index}}) (this index - {{$index}})
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>  
+</body>
+</html>

@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html >
+<head>
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/Script.js"></script>
+</head>
+<body ng-app="myModule">
+
+    <div ng-controller="myController">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{data.id}}</td>
+                    <td>{{data.name}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>  
+</body>
+</html>

@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html ng-app="myModule">
+<head>
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/Script.js"></script>
+</head>
+<body>
+
+    <div ng-controller="myController">
+        Search: <input type="text" ng-model="searchText" />
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="technology in technologies | filter: searchText">
+                    <td>{{technology.name}}</td>
+   
+                </tr>
+            </tbody>
+        </table>
+    </div>  
+</body>
+</html>

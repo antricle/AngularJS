@@ -1,0 +1,17 @@
+﻿<!DOCTYPE html>
+<html ng-app="myModule">
+<head>
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/Script.js"></script>
+</head>
+<body>
+    <div ng-controller="myController">
+        <div>
+            {{character.name}} 
+        </div>
+        <div>
+            <img ng-src="{{ character.image }}" alt="{{character.name}}" />
+        </div>
+    </div>
+</body>
+</html>

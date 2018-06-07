@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html ng-app="myModule">
+<head>
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/Script.js"></script>
+    <script src="Scripts/CustomFilter.js"></script>
+</head>
+<body>
+
+    <div ng-controller="myController">
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Gender</th>
+                    <th>Salary</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="emp in employees">
+                    <td>{{emp.name}}</td>
+                    <td>{{emp.gender | gender}}</td>
+                    <td>{{emp.salary}}</td>
+   
+                </tr>
+            </tbody>
+        </table>
+    </div>  
+</body>
+</html>

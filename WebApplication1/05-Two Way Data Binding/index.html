@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html ng-app="twoWayDataBindingModule">
+<head>
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/Script.js"></script>
+</head>
+<body>
+    <div ng-controller="twoWayDataBindingController">
+        <div>
+            FirstName: <input type="text" ng-model="employee.firstName" /><br />
+            LastName: <input type="text" ng-model="employee.lastName" /><br />
+            Gender: <input type="text" ng-model="employee.gender" />
+        </div>
+        <div>
+            {{employee.firstName}}
+        </div>
+        <div>
+            {{employee.lastName}}
+        </div>
+        <div>
+            {{employee.gender}}
+        </div>
+    </div>
+</body>
+</html>

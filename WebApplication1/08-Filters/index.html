@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html ng-app="myModule">
+<head>
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/Script.js"></script>
+</head>
+<body>
+
+    <div ng-controller="myController">
+        Rows to display: <input type="number" step="1" min="0" max="5" ng-model="rowLimit" />
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="technology in technologies | limitTo:rowLimit">
+                    <td>{{technology.name}}</td>
+   
+                </tr>
+            </tbody>
+        </table>
+    </div>  
+</body>
+</html>

@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html ng-app="myModule">
+<head>
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/Script.js"></script>
+</head>
+<body>
+
+    <div ng-controller="myController">
+      
+        <table>
+            <thead>
+                <tr>
+                    <th ng-click="sortData('name')">
+                        Name (click on this to filter)
+                    </th>
+                    <th ng-click="sortData('creator')">
+                        Creator (click on this to filter)
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="technology in technologies | orderBy:sortColumn:reverseSort">
+                    <td>{{technology.name}}</td>
+                    <td>{{technology.creator}}</td>
+   
+                </tr>
+            </tbody>
+        </table>
+    </div>  
+</body>
+</html>
